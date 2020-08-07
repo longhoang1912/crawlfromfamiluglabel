@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title>
+    My project
+  </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <style>
+    h1 {
+      text-align: center;
+      color: blue;
+      font-style: xx-large;
+    }
+  </style>
+
+  <h1>Crawl data from familug.org</h1>
+
+  <form action="/" , method="POST">
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="fname" class="sr-only">Password</label>
+      <input name="fname" style="
+      width: 25%;
+      margin-left: 37%;
+      text-align: center;
+  " class="form-control" placeholder="LABEL">
+      <button type="submit" style="
+      margin-left: 570;
+  " class="btn btn-primary mb-2">SUBMIT</button>
+    </div>
+
+  </form>
+
+
+  <h3>
+    {% for title, link in result %}
+    <p><a href={{link}}>{{title}}</a></p>
+    {% endfor %}
+  </h3>
+
+</body>
+
+</html>
